@@ -1,4 +1,4 @@
-package io.ibrahim.linalgtest;
+package io.ibrahim.wearmirror;
 
 import android.app.Activity;
 import android.os.Bundle;
