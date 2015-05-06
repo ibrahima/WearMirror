@@ -25,4 +25,11 @@ public class MainActivity extends Activity
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+
+        public void openCSTests(View csButton){
+                Log.d("WearMirror", "Clicked CS button");
+                Intent intent = new Intent(this, CSTestsActivity.class);
+                startActivity(intent);
+        }
+
 }

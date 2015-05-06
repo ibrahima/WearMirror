@@ -9,3 +9,5 @@
     }
 -keepattributes Signature
 -dontwarn scala.collection.**
+-keep class com.github.fommil.*
+-keep class com.github.fommil.netlib.*
