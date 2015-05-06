@@ -6,7 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
-import android.os.
+import io.ibrahim.wearmirror.MyClassTest;
+
 public class MainActivity extends Activity
 {
     /** Called when the activity is first created. */
@@ -16,6 +17,7 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         // Button b = (Button)findViewById(R.id.settings_button);
+        MyClassTest.foo();
     }
 
     public void openSettings(View settingsButton){
