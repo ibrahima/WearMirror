@@ -30,7 +30,7 @@ object TestCS  {
   }
 
   def mp(A: DenseMatrix[Double], b: DenseVector[Double]) = {
-    val e_0 = 0.01
+    val e_0 = 0.0001
     val (n, m) = (A.rows, A.cols);
     var x_hat = DenseVector.zeros[Double](m)
     var e = 100000.0
@@ -53,7 +53,7 @@ object TestCS  {
   def testCS(s: Int, N_tests: Int) = {
     val n = 30
     val m = 50
-    var errors = DenseVector.zeros[double](N_tests)
+    var errors = DenseVector.zeros[Double](N_tests)
     for(i <- 0 until N_tests){
       val A = gen_a(n, m)
       val x = gen_x(m, s)
@@ -62,7 +62,7 @@ object TestCS  {
 
       errors(i) = (x-x_hat).t*(x-x_hat)
     }
-    errors
+    sum(errors)/N_tests
   }
 
   def mat2String(mat: Matrix[Double]) = {
