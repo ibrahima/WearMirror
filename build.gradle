@@ -49,6 +49,10 @@ android {
 
 }
 
+task appStart(type: Exec, dependsOn: 'installDebug') {
+    // linux
+    commandLine 'adb', 'shell', 'am', 'start', '-n', 'io.ibrahim.wearmirror/.MainActivity'
+}
 
 dependencies {
     compile "org.scala-lang:scala-library:2.11.6"
