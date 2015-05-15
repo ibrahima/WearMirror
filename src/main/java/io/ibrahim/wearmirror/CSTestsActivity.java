@@ -11,6 +11,7 @@ import breeze.linalg.*;
 
 import android.os.AsyncTask;
 import io.ibrahim.wearmirror.TestCS;
+import org.netlib.blas.*;
 
 public class CSTestsActivity extends Activity
 {
@@ -22,10 +23,7 @@ public class CSTestsActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cstests);
         tv = (TextView)findViewById(R.id.cs_tests_output);
-        tv.append("Testing appending to this TextView\n");
-        DenseMatrix A = TestCS.gen_a(3, 5);
-        tv.append(TestCS.mat2String(A));
-
+        tv.append("BLAS implementation:"+BLAS.getInstance().getClass().getName() + "\n");
         CSBenchTask cst = new CSBenchTask();
         cst.execute();
     }
