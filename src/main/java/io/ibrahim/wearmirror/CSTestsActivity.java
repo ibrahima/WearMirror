@@ -11,7 +11,7 @@ import breeze.linalg.*;
 
 import android.os.AsyncTask;
 import io.ibrahim.wearmirror.TestCS;
-import org.netlib.blas.*;
+import com.github.fommil.netlib.BLAS;
 
 public class CSTestsActivity extends Activity
 {
